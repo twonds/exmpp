@@ -1,7 +1,6 @@
 {application, exmpp, [
     {description, "XMPP/Jabber protocol oriented XML library"},
-    {vsn, "@VERSION@"},
-    {id, "$Id$"},
+    {vsn, "git-head"},
     {modules, [
         exmpp,
         exmpp_caps,
@@ -43,14 +42,7 @@
         exmpp_server_tls,
         exmpp_sasl_digest,
         exmpp_session,
-        exmpp_socket@COMPAT_MODULES_START@
-        @COMPAT_MODULES@ejabberd_socket,
-        @COMPAT_MODULES@ejabberd_zlib,
-        @COMPAT_MODULES@jlib,
-        @COMPAT_MODULES@stringprep,
-        @COMPAT_MODULES@tls,
-        @COMPAT_MODULES@xml,
-        @COMPAT_MODULES@xml_stream
+        exmpp_socket
     ]},
     {registered, [
         exmpp_sup,
