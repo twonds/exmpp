@@ -42,7 +42,18 @@
         exmpp_server_tls,
         exmpp_sasl_digest,
         exmpp_session,
-        exmpp_socket
+	exmpp_known_nss,
+	exmpp_known_elems,
+	exmpp_known_attrs,
+        exmpp_socket,
+        ejabberd_socket,
+        ejabberd_zlib,
+        exmpp_bosh,
+        jlib,
+        stringprep,
+        tls,
+        xml,
+        xml_stream
     ]},
     {registered, [
         exmpp_sup,
