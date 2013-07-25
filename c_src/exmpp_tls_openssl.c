@@ -619,7 +619,10 @@ init_library(struct exmpp_tls_openssl_data *edd,
 	 * sense, turn it off.
 	 */
 	SSL_CTX_set_session_cache_mode(edd->ctx, SSL_SESS_CACHE_OFF);
+#ifdef SSL_OP_NO_TICKET
 	SSL_CTX_set_options(edd->ctx, SSL_OP_NO_TICKET);
+#endif
+
 #ifdef SSL_MODE_RELEASE_BUFFERS
 	/*
 	 * This appeared in OpenSSL 1.0.0,
